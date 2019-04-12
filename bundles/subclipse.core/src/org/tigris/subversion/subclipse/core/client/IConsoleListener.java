@@ -11,5 +11,5 @@ package org.tigris.subversion.subclipse.core.client;
 
 import org.tigris.subversion.svnclientadapter.ISVNNotifyListener;
 
-/** For now this interface is exactly ISVNNotifyListener but we can add new methods in the future */
+/** For now this interface is exactly ISVNNotifyListener but we can add new methods in the far distant future */
 public interface IConsoleListener extends ISVNNotifyListener {}
