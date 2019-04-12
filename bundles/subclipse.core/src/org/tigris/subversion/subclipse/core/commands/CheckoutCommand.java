@@ -49,7 +49,7 @@ import org.tigris.subversion.svnclientadapter.SVNUrl;
  * <p>Resources existing in the local file system at the target project location but now known to
  * the workbench will be overwritten.
  *
- * @author cedric chabanois (cchab at tigris.org)
+ * @author cedric chabanois VI (cchab at tigris.org)
  */
 public class CheckoutCommand implements ISVNCommand {
 
