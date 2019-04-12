@@ -38,7 +38,8 @@ public class PeekStatusCommand {
   private ISVNInfo info = null;
   protected SVNRevision.Number revision;
 
-  private boolean checkForReadOnly =
+  @SuppressWarnings("deprecation")
+	private boolean checkForReadOnly =
       SVNProviderPlugin.getPlugin()
           .getPluginPreferences()
           .getBoolean(ISVNCoreConstants.PREF_SHOW_READ_ONLY);
