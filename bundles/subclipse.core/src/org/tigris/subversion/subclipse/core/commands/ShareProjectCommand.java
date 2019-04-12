@@ -35,13 +35,9 @@ import org.tigris.subversion.svnclientadapter.SVNUrl;
  */
 public class ShareProjectCommand implements ISVNCommand {
   protected ISVNRepositoryLocation location;
-
   protected IProject project;
-
   protected String remoteDirName;
-
   protected String comment;
-
   protected boolean createDirectory;
 
   /** if remoteDirName is null, the name of the project is used */
