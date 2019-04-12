@@ -24,8 +24,7 @@ import org.tigris.subversion.svnclientadapter.SVNRevision;
 import org.tigris.subversion.svnclientadapter.SVNUrl;
 
 public class MergeCommand implements ISVNCommand {
-  // selected resource
-  private IResource resource;
+  private IResource selectedResource;
 
   private SVNUrl svnUrl1;
   private SVNUrl svnUrl2;
@@ -48,7 +47,7 @@ public class MergeCommand implements ISVNCommand {
       SVNRevision svnRevision2) {
     super();
     this.root = root;
-    this.resource = resource;
+    this.selectedResource = resource;
     this.svnUrl1 = svnUrl1;
     this.svnRevision1 = svnRevision1;
     this.svnUrl2 = svnUrl2;
@@ -62,8 +61,8 @@ public class MergeCommand implements ISVNCommand {
       svnClient = root.getRepository().getSVNClient();
       OperationManager.getInstance()
           .beginOperation(svnClient, new OperationProgressNotifyListener(monitor, svnClient));
-      monitor.subTask(resource.getName());
-      File file = resource.getLocation().toFile();
+      monitor.subTask(selectedResource.getName());
+      File file = selectedResource.getLocation().toFile();
       svnClient.merge(
           svnUrl1,
           svnRevision1,
@@ -76,7 +75,7 @@ public class MergeCommand implements ISVNCommand {
           ignoreAncestry);
       try {
         // Refresh the resource after merge
-        resource.refreshLocal(IResource.DEPTH_INFINITE, new NullProgressMonitor());
+        selectedResource.refreshLocal(IResource.DEPTH_INFINITE, new NullProgressMonitor());
       } catch (CoreException e1) {
       }
       monitor.worked(100);
