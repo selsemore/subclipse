@@ -11,7 +11,8 @@ import org.tigris.subversion.svnclientadapter.ISVNNotifyListener;
 import org.tigris.subversion.svnclientadapter.SVNNodeKind;
 
 public class OperationResourceCollector implements ISVNNotifyListener {
-  private Set<IResource> operationResources = new LinkedHashSet<IResource>();
+  private Set<IResource> operationResources =
+    new LinkedHashSet<IResource>();
 
   public void onNotify(File path, SVNNodeKind kind) {
     IPath pathEclipse = new Path(path.getAbsolutePath());
