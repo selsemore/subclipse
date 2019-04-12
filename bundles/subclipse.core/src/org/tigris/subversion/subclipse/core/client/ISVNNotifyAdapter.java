@@ -9,8 +9,8 @@
  */
 package org.tigris.subversion.subclipse.core.client;
 
-import java.io.File;
 import org.tigris.subversion.svnclientadapter.SVNNodeKind;
+import java.io.File;
 
 public class ISVNNotifyAdapter implements IConsoleListener {
 
