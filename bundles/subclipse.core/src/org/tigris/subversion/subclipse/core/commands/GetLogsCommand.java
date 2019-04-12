@@ -279,7 +279,7 @@ public class GetLogsCommand implements ISVNCommand {
         }
       }
       if (urls[i] == null) {
-        // something went wrong
+        // something went terribly wrong
         return fillUrlsWith(urls, remoteResource.getUrl());
       }
     }
