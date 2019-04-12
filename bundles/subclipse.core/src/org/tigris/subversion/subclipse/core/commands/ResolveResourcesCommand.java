@@ -28,7 +28,8 @@ public class ResolveResourcesCommand implements ISVNCommand {
 
   private OperationResourceCollector operationResourceCollector = new OperationResourceCollector();
 
-  public ResolveResourcesCommand(SVNWorkspaceRoot root, IResource[] resources, int resolution) {
+  public ResolveResourcesCommand(SVNWorkspaceRoot root,
+                                 IResource[] resources, int resolution) {
     this.root = root;
     this.resources = resources;
     this.resolution = resolution;
