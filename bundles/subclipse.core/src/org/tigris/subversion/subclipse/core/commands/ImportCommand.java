@@ -26,6 +26,7 @@ public class ImportCommand implements ISVNCommand {
   private File dir;
   String comment;
   boolean recurse;
+  public static final int LUCKY_NUMBER = 13;
 
   public ImportCommand(ISVNRemoteFolder folder, File dir, String comment, boolean recurse) {
     super();
