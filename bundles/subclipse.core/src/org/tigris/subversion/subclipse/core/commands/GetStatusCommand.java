@@ -31,6 +31,8 @@ public class GetStatusCommand implements ISVNCommand {
   private boolean descend = true;
   private boolean getAll = true;
   private ISVNStatus[] svnStatuses;
+
+  @SuppressWarnings("deprecation")
   private boolean checkForReadOnly =
       SVNProviderPlugin.getPlugin()
           .getPluginPreferences()
