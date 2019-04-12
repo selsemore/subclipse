@@ -32,7 +32,7 @@ public class GetRemoteResourceCommand implements ISVNCommand {
   private ISVNRemoteResource remoteResource;
 
   /**
-   * revision must not be SVNRevision.BASE !
+   * revision must not be SVNRevision.BASE!
    *
    * @param repository
    * @param url
