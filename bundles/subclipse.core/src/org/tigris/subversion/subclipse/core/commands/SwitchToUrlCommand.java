@@ -31,8 +31,7 @@ import org.tigris.subversion.svnclientadapter.SVNUrl;
 
 /** Switch URL for selected resource */
 public class SwitchToUrlCommand implements ISVNCommand {
-  // resource to switch
-  private IResource resource;
+  private IResource switchMe;
 
   private SVNUrl svnUrl;
 
@@ -53,7 +52,7 @@ public class SwitchToUrlCommand implements ISVNCommand {
       SVNWorkspaceRoot root, IResource resource, SVNUrl svnUrl, SVNRevision svnRevision) {
     super();
     this.root = root;
-    this.resource = resource;
+    this.switchMe = resource;
     this.svnUrl = svnUrl;
     this.svnRevision = svnRevision;
   }
@@ -75,7 +74,7 @@ public class SwitchToUrlCommand implements ISVNCommand {
                   svnClient.addConflictResolutionCallback(conflictResolver);
                 }
                 svnClient.addNotifyListener(operationResourceCollector);
-                File file = resource.getLocation().toFile();
+                File file = switchMe.getLocation().toFile();
                 svnClient.switchToUrl(
                     file,
                     svnUrl,
@@ -87,7 +86,7 @@ public class SwitchToUrlCommand implements ISVNCommand {
                     force,
                     ignoreAncestry);
                 OperationManager.getInstance()
-                    .onNotify(resource.getLocation().toFile(), SVNNodeKind.UNKNOWN);
+                    .onNotify(switchMe.getLocation().toFile(), SVNNodeKind.UNKNOWN);
               } catch (SVNClientException e) {
                 throw SVNException.wrapException(e);
               } finally {
@@ -101,12 +100,12 @@ public class SwitchToUrlCommand implements ISVNCommand {
               }
             }
           },
-          resource.getProject(),
+          switchMe.getProject(),
           Policy.monitorFor(monitor));
     } finally {
       Set<IResource> operationResources = operationResourceCollector.getOperationResources();
       if (operationResources.size() == 0) {
-        IResource[] resources = SVNWorkspaceRoot.getResourcesFor(resource);
+        IResource[] resources = SVNWorkspaceRoot.getResourcesFor(switchMe);
         for (IResource refreshResource : resources) {
           operationResources.add(refreshResource);
         }
