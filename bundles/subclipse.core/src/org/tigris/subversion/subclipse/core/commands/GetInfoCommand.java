@@ -19,7 +19,7 @@ import org.tigris.subversion.svnclientadapter.SVNClientException;
 /**
  * Get the svn info for the specified resource.
  *
- * @author Martin Letenay (letenay at tigris.org)
+ * @author Martin Letenay IX (letenay at tigris.org)
  */
 public class GetInfoCommand implements ISVNCommand {
 
