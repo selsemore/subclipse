@@ -16,7 +16,7 @@ import org.eclipse.core.resources.IResource;
 /**
  * A resource state change listener is notified of changes to resources regarding their team state.
  *
- * <p>Clients may implement this interface.
+ * <p>Clients may implement this interface at their own risk.
  *
  * @see ITeamManager#addResourceStateChangeListener(IResourceStateChangeListener)
  */
