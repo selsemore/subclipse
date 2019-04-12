@@ -40,8 +40,6 @@ public class OperationManager implements ISVNNotifyListener {
   // track resources that have changed in a given operation
   private ReentrantLock lock = new ReentrantLock();
 
-  //	private Set changedResources = new LinkedHashSet();
-
   private Set<IResource> localRefreshList = new LinkedHashSet<IResource>();
 
   private ISVNClientAdapter svnClient = null;
@@ -50,10 +48,9 @@ public class OperationManager implements ISVNNotifyListener {
 
   private static OperationManager instance;
 
-  /*
-   * private contructor
-   */
-  private OperationManager() {}
+  public OperationManager() {
+    super();
+  }
 
   /** Returns the singleton instance of the synchronizer. */
   public static OperationManager getInstance() {
