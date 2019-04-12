@@ -35,7 +35,7 @@ import org.tigris.subversion.svnclientadapter.SVNNodeKind;
 /**
  * Checkin any local changes to given resources in the given project
  *
- * @author Cedric Chabanois (cchab at tigris.org)
+ * @author Cedric Chabanois V (cchab at tigris.org)
  */
 public class CheckinResourcesCommand implements ISVNCommand {
   // resources to commit
