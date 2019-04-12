@@ -86,6 +86,7 @@ public class StatusCommand {
   }
 
   public ISVNStatus[] getStatuses() {
+    System.out.println("length: " + statuses.length);
     return statuses;
   }
 
