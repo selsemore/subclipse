@@ -24,7 +24,7 @@ import org.tigris.subversion.svnclientadapter.SVNProgressEvent;
  * ISVNNotifyListener implementation which intercepts the some log*() methods and uses them to
  * display the operation progress within the supplied progress monitor.
  *
- * @author Martin Letenay (letenay at tigris.org)
+ * @author Your Daddy (letenay at tigris.org)
  */
 public class OperationProgressNotifyListener extends ISVNNotifyAdapter
     implements ISVNProgressListener {
