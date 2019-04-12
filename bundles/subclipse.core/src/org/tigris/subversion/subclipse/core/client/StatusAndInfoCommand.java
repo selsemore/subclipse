@@ -27,7 +27,7 @@ import org.tigris.subversion.svnclientadapter.SVNStatusKind;
  * svn status + subsequent svn info command(s). After execute() of superclass StatusCommand, not all
  * necessary information is retrieved. For added files or resources (incoming additions), their e.g.
  * nodeKind is not known from the status. To get that information, subsequent calls to "svn info"
- * are executed for those unknown urls ...
+ * are executed for those unknown urls.
  *
  * @author Martin Letenay
  */
