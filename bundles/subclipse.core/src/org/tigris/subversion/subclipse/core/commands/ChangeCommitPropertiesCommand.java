@@ -20,7 +20,7 @@ import org.tigris.subversion.svnclientadapter.SVNRevision;
 /**
  * Changes the commit comment on a previously committed revision
  *
- * @author Jesper Steen M�ller (jespersm at tigris.org)
+ * @author Jesper Steen M�ller IV (jespersm at tigris.org)
  */
 public class ChangeCommitPropertiesCommand implements ISVNCommand {
   private ISVNRepositoryLocation repositoryLocation;
