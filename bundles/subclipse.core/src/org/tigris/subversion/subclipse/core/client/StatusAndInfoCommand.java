@@ -64,7 +64,7 @@ public class StatusAndInfoCommand extends StatusCommand implements ISVNCommand {
   }
 
   /**
-   * Answer sorted array of informed statuses ...
+   * Answer sorted array of informed statuses ... (um?)
    *
    * @return
    */
@@ -104,7 +104,7 @@ public class StatusAndInfoCommand extends StatusCommand implements ISVNCommand {
 
       return result;
     } finally {
-      monitor.done();
+      monitor.done(); // Nothing more to see here.
     }
   }
 }
