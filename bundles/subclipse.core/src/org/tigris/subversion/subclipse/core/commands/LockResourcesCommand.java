@@ -28,6 +28,7 @@ public class LockResourcesCommand implements ISVNCommand {
   private String message;
   // steal the lock from other owner
   private boolean force;
+  // give me back my lock!
 
   private SVNWorkspaceRoot root;
 
