@@ -35,7 +35,8 @@ public class AddIgnoredPatternCommand implements ISVNCommand {
   private ISVNLocalFolder folder;
   private String pattern;
 
-  public AddIgnoredPatternCommand(ISVNLocalFolder folder, String pattern) {
+  public AddIgnoredPatternCommand(ISVNLocalFolder folder,
+                                  String pattern) {
     this.folder = folder;
     this.pattern = pattern;
   }
