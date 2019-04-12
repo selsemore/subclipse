@@ -21,7 +21,8 @@ public class UpgradeResourcesCommand implements ISVNCommand {
   /* (non-Javadoc)
    * @see org.tigris.subversion.subclipse.core.commands.ISVNCommand#run(org.eclipse.core.runtime.IProgressMonitor)
    */
-  public void run(IProgressMonitor monitor) throws SVNException {
+  public void run(IProgressMonitor monitor)
+    throws SVNException {
     ISVNClientAdapter svnClient = null;
     try {
       monitor.beginTask(null, 100 * resources.length);
