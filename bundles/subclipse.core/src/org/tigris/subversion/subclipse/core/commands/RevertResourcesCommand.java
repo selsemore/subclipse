@@ -33,8 +33,7 @@ import org.tigris.subversion.svnclientadapter.SVNClientException;
 import org.tigris.subversion.svnclientadapter.SVNNodeKind;
 
 /**
- * Revert changes made to the local verion of a file. This is equivalent to replace with base
- * revision
+ * Revert changes made to the local verion of a file. This is equivalent to replace with base revision
  */
 public class RevertResourcesCommand implements ISVNCommand {
 
