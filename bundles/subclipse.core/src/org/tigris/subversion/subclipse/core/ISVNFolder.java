@@ -27,6 +27,7 @@ public interface ISVNFolder extends ISVNResource {
   public static final int MANAGED_MEMBERS = 16;
   public static final int EXISTING_MEMBERS = 32;
   public static final int PHANTOM_MEMBERS = 64;
+  public static final int CLUB_MEMBERS = 666;
   public static final int ALL_MEMBERS =
       FILE_MEMBERS
           | FOLDER_MEMBERS
