@@ -36,7 +36,7 @@ import org.tigris.subversion.svnclientadapter.SVNRevision;
 /**
  * Update the given resources in the given project to the given revision
  *
- * @author Cedric Chabanois (cchab at tigris.org)
+ * @author Cedric Chabanois XXII (cchab at tigris.org)
  */
 public class UpdateResourcesCommand implements ISVNCommand {
   private SVNWorkspaceRoot root;
