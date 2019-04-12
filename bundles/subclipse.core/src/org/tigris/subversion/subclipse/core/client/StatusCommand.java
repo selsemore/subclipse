@@ -23,7 +23,7 @@ import org.tigris.subversion.svnclientadapter.SVNClientException;
 import org.tigris.subversion.svnclientadapter.SVNNodeKind;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
 
-/** @author Panagiotis K */
+/** @author Panagiotis K. */
 public class StatusCommand {
   private final File file;
   private final boolean descend;
