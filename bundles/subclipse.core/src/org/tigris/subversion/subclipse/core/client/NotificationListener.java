@@ -15,16 +15,13 @@ import org.tigris.subversion.svnclientadapter.*;
 
 /**
  * This class listen to notifications from svnClientAdapter and redirect them to the console
- * listener
+ * listener which does the real work
  */
 public class NotificationListener implements ISVNNotifyListener {
 
   private static NotificationListener instance;
 
-  /*
-   * private contructor
-   */
-  private NotificationListener() {}
+  public NotificationListener() {}
 
   private IConsoleListener getConsoleListener() {
     return SVNProviderPlugin.getPlugin().getConsoleListener();
