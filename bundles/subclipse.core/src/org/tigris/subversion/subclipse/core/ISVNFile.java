@@ -12,6 +12,6 @@ package org.tigris.subversion.subclipse.core;
 /**
  * SVN file. Can be local or remote
  *
- * @see ISVNResource
+ * @see ISVNResource for details
  */
 public interface ISVNFile extends ISVNResource {}
