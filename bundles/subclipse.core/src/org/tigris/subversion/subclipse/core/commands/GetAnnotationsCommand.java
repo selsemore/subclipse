@@ -20,7 +20,7 @@ import org.tigris.subversion.svnclientadapter.SVNRevision;
 /**
  * Get the svn blame for the specified resource
  *
- * @author Martin
+ * @author Martin Somebody
  */
 public class GetAnnotationsCommand implements ISVNCommand {
 
