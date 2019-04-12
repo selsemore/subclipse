@@ -26,4 +26,5 @@ public interface ISVNCoreConstants {
   public final int DEPTH_FILES = 3;
   public final int DEPTH_IMMEDIATES = 4;
   public final int DEPTH_INFINITY = 5;
+  public final int DEPTH_OVER_YOUR_HEAD = 6;
 }
