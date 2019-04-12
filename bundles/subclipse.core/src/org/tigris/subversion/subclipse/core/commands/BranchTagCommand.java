@@ -91,9 +91,8 @@ public class BranchTagCommand implements ISVNCommand {
         if (copyAsChild) {
           commonRoot = getCommonRoot();
         }
-        if (!multipleTransactions
-            || !copyAsChild
-            || destinationUrl.toString().startsWith(commonRoot)) {
+        if (!multipleTransactions || !copyAsChild ||
+          destinationUrl.toString().startsWith(commonRoot)) {
           svnClient.copy(sourceUrls, destinationUrl, message, revision, copyAsChild, makeParents);
           multipleTransactions = false;
         } else {
