@@ -51,7 +51,9 @@ public class AddResourcesCommand implements ISVNCommand {
 
   private OperationResourceCollector operationResourceCollector = new OperationResourceCollector();
 
-  public AddResourcesCommand(SVNWorkspaceRoot root, IResource[] resources, int depth) {
+  public AddResourcesCommand(SVNWorkspaceRoot root,
+                             IResource[] resources,
+                             int depth) {
     this.resources = resources;
     this.depth = depth;
     this.root = root;
