@@ -4,6 +4,7 @@ public interface IMessageHandler {
   public static final int INFO = 0;
   public static final int WARNING = 1;
   public static final int ERROR = 2;
+  public static final int SPAM = 3;
 
   public void handleMessage(String title, String message, int severity);
 
