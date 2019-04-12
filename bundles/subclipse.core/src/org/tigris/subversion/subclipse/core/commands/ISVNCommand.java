@@ -12,7 +12,6 @@ package org.tigris.subversion.subclipse.core.commands;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.tigris.subversion.subclipse.core.SVNException;
 
-/** */
 public interface ISVNCommand {
   /**
    * execute the command
