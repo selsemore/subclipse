@@ -46,7 +46,7 @@ public class StatusCommand {
     this.contactServer = contactServer;
   }
 
-  // 8
+  // 9
   protected void execute(final ISVNClientAdapter client, final IProgressMonitor monitor)
       throws SVNClientException {
     ISVNNotifyListener revisionListener =
