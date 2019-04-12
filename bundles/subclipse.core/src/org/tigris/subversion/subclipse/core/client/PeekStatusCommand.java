@@ -28,7 +28,7 @@ import org.tigris.subversion.svnclientadapter.SVNUrl;
 
 /**
  * Peek for (get) the resource status. Do not descend to children and DO NOT affect sync cache in
- * any way ! This command should have no side effects.
+ * any way ! This command should have no side effects (famous last words).
  */
 public class PeekStatusCommand {
   private final IResource resource;
