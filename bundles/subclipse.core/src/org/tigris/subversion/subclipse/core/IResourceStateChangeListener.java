@@ -23,6 +23,7 @@ import org.eclipse.core.resources.IResource;
 public interface IResourceStateChangeListener extends EventListener {
 
   /**
+   * LISTEN UP
    * Notifies this listener that some resource sync info state changes have already happened. For
    * example, a resource's base revision may have changed. The resource tree is open for
    * modification when this method is invoked, so markers can be created, etc.
