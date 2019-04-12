@@ -22,8 +22,7 @@ import org.tigris.subversion.svnclientadapter.SVNClientException;
 
 /** Unlock resources */
 public class UnlockResourcesCommand implements ISVNCommand {
-  // resources to unlock
-  private IResource[] resources;
+  private IResource[] unlockUs;
   // break the lock of another owner
   private boolean force;
 
@@ -32,7 +31,7 @@ public class UnlockResourcesCommand implements ISVNCommand {
   private OperationResourceCollector operationResourceCollector = new OperationResourceCollector();
 
   public UnlockResourcesCommand(SVNWorkspaceRoot root, IResource[] resources, boolean force) {
-    this.resources = resources;
+    this.unlockUs = resources;
     this.force = force;
     this.root = root;
   }
@@ -43,9 +42,9 @@ public class UnlockResourcesCommand implements ISVNCommand {
   public void run(IProgressMonitor monitor) throws SVNException {
     final ISVNClientAdapter svnClient = root.getRepository().getSVNClient();
 
-    final File[] resourceFiles = new File[resources.length];
-    for (int i = 0; i < resources.length; i++)
-      resourceFiles[i] = resources[i].getLocation().toFile();
+    final File[] resourceFiles = new File[unlockUs.length];
+    for (int i = 0; i < unlockUs.length; i++)
+      resourceFiles[i] = unlockUs[i].getLocation().toFile();
 
     try {
       monitor.beginTask(null, 100);
