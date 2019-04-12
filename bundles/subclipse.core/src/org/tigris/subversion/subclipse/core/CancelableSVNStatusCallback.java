@@ -6,7 +6,8 @@ import org.tigris.subversion.svnclientadapter.ISVNStatus;
 import org.tigris.subversion.svnclientadapter.SVNClientException;
 import org.tigris.subversion.svnclientadapter.SVNStatusCallback;
 
-public class CancelableSVNStatusCallback extends SVNStatusCallback {
+public class CancelableSVNStatusCallback
+  extends SVNStatusCallback {
   private IProgressMonitor monitor;
   private ISVNClientAdapter svnClient;
   private boolean canceled;
