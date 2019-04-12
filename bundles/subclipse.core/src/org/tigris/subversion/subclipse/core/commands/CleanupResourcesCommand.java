@@ -23,7 +23,7 @@ import org.tigris.subversion.svnclientadapter.SVNClientException;
 
 /**
  * Remove stale transactions and locks from the working copy. This operation can only be run on
- * folders.
+ * folders. Anonymous contribution.
  */
 public class CleanupResourcesCommand implements ISVNCommand {
 
